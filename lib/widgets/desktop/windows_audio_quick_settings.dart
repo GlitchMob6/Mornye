@@ -636,24 +636,27 @@ class _WindowsAudioQuickSettingsPanelState
                   style: ButtonStyle(
                     visualDensity: VisualDensity.compact,
                     padding: const WidgetStatePropertyAll(
-                      EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+                      EdgeInsets.symmetric(horizontal: 4, vertical: 8),
                     ),
                     textStyle: WidgetStatePropertyAll(
                       Theme.of(context).textTheme.labelMedium?.copyWith(
-                            fontSize: 13.0,
+                            fontSize: 12.0,
                             fontWeight: FontWeight.w600,
                           ),
                     ),
                   ),
                   segments: const [
-                    ButtonSegment(value: 'shared', label: Text('Shared')),
+                    ButtonSegment(
+                      value: 'shared',
+                      label: Text('Shared', maxLines: 1),
+                    ),
                     ButtonSegment(
                       value: 'exclusive_event',
-                      label: Text('Exclusive Event'),
+                      label: Text('Exclusive', maxLines: 1),
                     ),
                     ButtonSegment(
                       value: 'exclusive_push',
-                      label: Text('Exclusive Push'),
+                      label: Text('Push', maxLines: 1),
                     ),
                   ],
                   selected: {
